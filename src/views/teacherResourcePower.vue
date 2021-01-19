@@ -31,7 +31,7 @@
                                             <i class="el-icon-s-custom"></i>
                                             <b>
 
-                                            姓名 ：{{item.name}}
+                                            教师 : {{item.name}}
                                         </b></h5>
                                     </el-tag>
 

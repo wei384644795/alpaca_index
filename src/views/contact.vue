@@ -48,7 +48,11 @@
             <div class="col-md-4">
 
                 <div>
-                    <img src="../../public/img/contact/title7.jpg" alt="">
+
+                    <el-image
+                            lazy="true"
+                            src="img/contact/title7.jpg"
+                            fit="scale-down"></el-image>
                 </div>
             </div>
         </div>

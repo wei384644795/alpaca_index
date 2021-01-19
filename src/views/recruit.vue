@@ -31,13 +31,17 @@
                 <el-collapse v-model="activeNames" @change="handleChange">
                     <el-collapse-item v-for="(item,i) in list" :key="item.id" :name="i">
                         <template slot="title">
-                            <h5>
-                                {{item.content}}
-                            </h5>
+                                <h6>
+                                    {{item.content}}
+                                </h6>
+
+
                             <i class="header-icon el-icon-info"></i>
                         </template>
                         <div v-for="str in item.contents" class="text-left">{{str.str}}</div>
+
                     </el-collapse-item>
+
                 </el-collapse>
             </div>
         </div>

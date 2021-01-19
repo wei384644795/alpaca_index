@@ -5,6 +5,12 @@ import App from './App.vue'
 
 // 导入 自定义路由模块
 import router from './router'
+
+import Axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, Axios)
+Vue.config.productionTip = false
+
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 

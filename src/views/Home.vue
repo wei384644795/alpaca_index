@@ -185,7 +185,7 @@ export default {
     methods:{
       setParent_img() {
         this.$emit('func',this.home_img);
-          htmlWebpackPlugin.options.title = "软易IT-首页";
+
       }
     },
     beforeMount(){
