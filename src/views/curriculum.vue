@@ -64,7 +64,7 @@
                 <p >it培训知识 it面试经验  助力成长</p>
 
             </div>
-            <el-collapse v-model="activeNames"  >
+            <el-collapse   >
                 <el-collapse-item v-for="(item,i) in context" :key="i" >
                     <template slot="title">
                         {{item.title}}<i class="header-icon el-icon-info"></i>
@@ -200,16 +200,10 @@
             setParent_img() {
                 this.$emit('func', this.data_img);
             },
-            setCurriculum(){
-                this.axios("http://localhost:8080/my_ssm/curriculum/findAll").then(function(data){
-                    alert("lai");
-                    console.log(data);
-                });
-            }
+
         },
         beforeMount() {
             this.setParent_img();
-            this.setCurriculum();
         }
     }
 </script>

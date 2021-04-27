@@ -64,7 +64,7 @@
                             './img/feature/class2_20201227155415.jpg',
                             './img/feature/class4_20201229154055.jpg' ,
                             './img/feature/class5_20201229154107.jpg' ,
-                            './img/feature/class6_20201229154116.jpg',
+                            './img/feature/class8_20210120170204.jpg',
                             './img/feature/office1_20201229154134.jpg',
                             './img/feature/office_20201229154233.jpg',
                             './img/feature/class7_20201229154124.jpg',
@@ -86,7 +86,10 @@
                             './img/feature/xport.jpg',
                             './img/feature/dongYou_20201227155242.jpg',
                             './img/feature/dongYou4_20201227155426.jpg',
-
+                            './img/feature/dongYou7_20201229151429.jpg',
+                            './img/feature/dongYou8_20201219_164844.jpg',
+                            './img/feature/dongYou9_20201219_150139.jpg',
+                            './img/feature/dongYou11_20201219_150131.jpg',
                         ]
                     },
                     {
@@ -97,10 +100,16 @@
                             my_color: '#4cae4c',
                         },
                         paths: [
-                            './img/feature/birthday.jpg',
-                            './img/feature/birthday1.jpg',
+
                             './img/feature/birthday3.jpg',
+                            './img/feature/birthday.jpg',
+                            './img/feature/cake5.jpg',
+                            './img/feature/cake1.jpg',
+                            './img/feature/cake2.jpg',
                             './img/feature/alpaca_cake.jpg',
+                            './img/feature/cake3.jpg',
+                            './img/feature/cake4.jpg',
+
                         ]
                     }
                 ],

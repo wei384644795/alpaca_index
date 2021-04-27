@@ -50,7 +50,7 @@
                 <div>
 
                     <el-image
-                            lazy="true"
+
                             src="img/contact/title7.jpg"
                             fit="scale-down"></el-image>
                 </div>
@@ -72,13 +72,14 @@
                     {content:'咨询QQ: 377423702'},
                     {content:' 网址: 377423702'},
                     {content:'来信地址: 深圳坪山区坑梓街道莹展花园'},
-                    {content:'邮编: 518122'},
+                    {content:'邮编: 518122 '},
                 ]
             };
         },
         methods:{
             setParent_img() {
                 this.$emit('func','');
+
             }
         },
         beforeMount(){

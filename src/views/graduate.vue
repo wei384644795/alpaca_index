@@ -19,7 +19,7 @@
                                 <el-col :xs="24" :sm="12" :md="12">
                                     <el-image
                                             style="height: 200px; width: 170px"
-                                            lazy="true"
+
                                             :src="item.img"
                                             fit="scale-down"></el-image>
                                 </el-col>

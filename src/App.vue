@@ -89,12 +89,12 @@
         <!--    <mybtn type="primary" @click="show">123</mybtn>-->
         <!--    <mt-button type="primary" @click="show">default</mt-button>-->
         <div class="container-fluid">
-            <router-view name="carousel" :home_img="home_img"></router-view>
+            <router-view name="carousel" :home_img="home_img" :deviceType="deviceType" ></router-view>
         </div>
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                 <!--   main -->
-                <router-view @func="setHome_img"/>
+                <router-view @func="setHome_img" />
             </div>
 
         </div>
@@ -102,38 +102,42 @@
 
 
         <!--    底部 -->
-        <div class="container-fluid footer ">
-            <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan ">
-                    <img src="../public/img/title16.jpg" class="img-responsive mm-png">
+        <div class="container-fluid footer " >
+            <div v-if="this.deviceType === 'pc'">
+                <div class="row"  >
+                    <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan ">
+                        <img src="../public/img/title16.jpg" class="img-responsive mm-png">
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan">
+                        <img src="../public/img/title17.jpg" class="img-responsive mm-png">
+                    </div>
+
+
+                    <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan ">
+                        <img src="../public/img/title12.jpg" class="img-responsive mm-png">
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan ">
+                        <img src="../public/img/spring.jpg" class="img-responsive mm-png">
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan ">
+                        <img src="../public/img/title13.jpg" class="img-responsive mm-png">
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan ">
+                        <img src="../public/img/title11.jpg" class="img-responsive mm-png">
+                    </div>
+
                 </div>
-
-                <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan">
-                    <img src="../public/img/title17.jpg" class="img-responsive mm-png">
-                </div>
-
-
-                <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan ">
-                    <img src="../public/img/title12.jpg" class="img-responsive mm-png">
-                </div>
-
-                <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan ">
-                    <img src="../public/img/spring.jpg" class="img-responsive mm-png">
-                </div>
-
-                <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan ">
-                    <img src="../public/img/title13.jpg" class="img-responsive mm-png">
-                </div>
-
-                <div class="col-md-2 col-sm-2 col-xs-2 col-lg-2 mm-kuan ">
-                    <img src="../public/img/title11.jpg" class="img-responsive mm-png">
-                </div>
-
             </div>
+
+            <div v-else-if="this.deviceType === 'mobile'"></div>
 
 
             <div class="text-center mm-font4 ">
-                <p>咨询QQ：377423702 邮编：518109</p>
+                <p>咨询QQ：377423702 邮编：518122</p>
             </div>
 
             <div class="text-center mm-font4">
@@ -155,6 +159,8 @@
     export default {
         data() {
             return {
+                /*pc和 mobile 显示 轮播*/
+                deviceType: 'pc',
                 activeIndex: '1',
                 activeIndex2: '1',
                 home_img: ['img/home/guang_pan.png', 'img/home/timg.jpg', 'img/home/TIM.jpg'],
@@ -166,9 +172,25 @@
             },
             setHome_img(data) {
                 this.home_img = data;
-            }
+            },
+            has() {
+                let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+                return flag;
+            },
 
         },
+        beforeMount(){
+
+
+        },
+        created(){
+            if (this.has()) {
+                this.deviceType = 'mobile';
+            } else {
+
+                this.deviceType = 'pc';
+            }
+        }
 
     }
 </script>
